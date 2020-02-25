@@ -2,10 +2,10 @@ node{
   stage('Git Checkout'){
     git 'https://github.com/vignesh05901/my-app'
     }
-  stage('compile-package'){
+  stage('Compile-Package'){
   // Get Maven home path
-    def mvnhome = tool name: 'Maven', type: 'maven'
-    sh "$(mvnhome)/bin/mvn package"
+    def mvnHome = tool name: 'Maven', type: 'maven'
+    sh "${mvnHome}/bin/mvn package"
   
   }
 }
