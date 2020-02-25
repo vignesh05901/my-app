@@ -1,0 +1,9 @@
+node{
+  stage('Git Checkout'){
+    git 'https://github.com/vignesh05901/my-app'
+    }
+  stage('compile-package){
+    sh 'mvn package'
+  
+  }
+}
